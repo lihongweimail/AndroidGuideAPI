@@ -200,7 +200,7 @@ def triple_selection():
                 print(p_uid_list[i])
                 print (entity1, relation, entity2, section, url,sentence_text,entity_url_id,sentence_id,relation_id)
                 print(one_phrase)
-                # break
+                break
 
     file_key_phrase.close()
     file_triple.close()
