@@ -29,6 +29,19 @@ def generate_data():
 def entity_selection():
     file_id_tag = open('/Users/Grand/Downloads/HDSKG/tempdata/androidAPI_id_tag_full_info_copy.csv')
 
+    file_filelist= open('/Users/Grand/Downloads/HDSKG/tempdata/filenamelist_copy.csv')
+
+
+    filename_list={}
+    for filenameline in file_filelist:
+        filenames=filenameline.split(',',1)
+        if len(filenames)==2 :
+            key,value=filenames[1].strip('\n'),filenames[0]
+            filename_list[key]=value
+
+
+
+
 
     phrase_list = []
     section_list = []
@@ -89,11 +102,13 @@ def entity_selection():
                         pure_original=classname
                         pure_type='Class'
 
-                    schema_list.append((pure_phrase,pure_section,pure_url,pure_parent,pure_type,pure_original,phrase_u_id))
+                    schema_list.append((pure_phrase,pure_section,pure_url,pure_parent,pure_type,pure_original,filename_list[pure_url]))
     file_id_tag.close()
 #    print(schema_list)
     print(len(schema_list))
     return schema_list
+
+
 
 
 

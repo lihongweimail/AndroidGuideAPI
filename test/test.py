@@ -24,59 +24,40 @@
 #remove non ascii char
 import re
 
-
-def remove_file_non_ascii_char():
-    fileSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent.txt')
-    fileNewSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt','w')
-
-    for i,oneSent in enumerate(fileSent) :
-
-        oneSent=''.join([i if (ord(i) < 128) and (i is not '\n') else ' ' for i in oneSent])
-
-        fileNewSent.write(oneSent.strip(' '))
-        fileNewSent.write('\n')
-
-
-    fileSent.close()
-    fileNewSent.close()
-    return
-
-#remove non ascii char
-def remove_file_non_ascii_char_with_new_id():
-    fileSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent.txt')
-    fileNewSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt','w')
-    j=1
-    for i,oneSent in enumerate(fileSent) :
-
-        oneSent=''.join([i if (ord(i) < 128) and (i is not '\n') else ' ' for i in oneSent])
-        eachSent = oneSent.split('\t')
-        id=str(j)
-        oneSent=id+'\t'+''.join(eachSent[1:])
-
-
-        fileNewSent.write(oneSent)
-        fileNewSent.write('\n')
-        j=j+1
-
-    fileSent.close()
-    fileNewSent.close()
-    return
-
-
-#check file content at line
-def find_line_content_by_debug():
-    # fileopen=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_forClaseIE.txt')
-    fileopen = open('/Users/Grand/Downloads/HDSKG/tempdata/seRelFeatures_idRel.csv')
-
-    for i,oneSent in enumerate(fileopen) :
-        linecontents=oneSent.split(',')
-
-        print(linecontents[37])
-        print(linecontents[38])
-
-
-    fileopen.close()
-    return
+#
+# def remove_file_non_ascii_char():
+#     fileSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent.txt')
+#     fileNewSent=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt','w')
+#
+#     for i,oneSent in enumerate(fileSent) :
+#
+#         oneSent=''.join([i if (ord(i) < 128) and (i is not '\n') else ' ' for i in oneSent])
+#
+#         fileNewSent.write(oneSent.strip(' '))
+#         fileNewSent.write('\n')
+#
+#
+#     fileSent.close()
+#     fileNewSent.close()
+#     return
+#
+#
+#
+#
+# #check file content at line
+# def find_line_content_by_debug():
+#     # fileopen=open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_forClaseIE.txt')
+#     fileopen = open('/Users/Grand/Downloads/HDSKG/tempdata/seRelFeatures_idRel.csv')
+#
+#     for i,oneSent in enumerate(fileopen) :
+#         linecontents=oneSent.split(',')
+#
+#         print(linecontents[37])
+#         print(linecontents[38])
+#
+#
+#     fileopen.close()
+#     return
 
 #
 # #check file content at line
@@ -144,74 +125,31 @@ def find_line_content_by_debug():
 #    return
 
 
-
-#check file content at line
-def collect_training_triple_file():
-
-    filefilenameid = open('/Users/Grand/Downloads/HDSKG/tempdata/uni_filenamelist_training.csv')
-    # fileallSent= open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt')
-    fileallRelation = open('/Users/Grand/Downloads/HDSKG/tempdata/androidAPIallCand5.txt')
-
-    # fileunitrainingAllSent=open('/Users/Grand/Downloads/HDSKG/tempdata/uni_AndroidAPI_training_Sent_ascii.txt','w')
-    fileunitrainingAllRelation=open('/Users/Grand/Downloads/HDSKG/tempdata/uni_AndroidAPI_training_Cand5_ascii.txt','w')
-
-
-
-# filefilenameid
-    filenameid_list = []
-
-    for line in filefilenameid:
-        data = line.split(',')
-        filenameid_list.append(data[0])
-
-    filefilenameid.close()
-
 #
-# # fileallSent
-#     uni_training_allsentence = []
+# a = next(x for x in A if y in x)
 #
-#     for line in fileallSent:
-#         data = line.split('\t')
-#         key, value = data[0], data[1]
-#         fileid=key.split('_')[0]
-#         if fileid in filenameid_list:
-#             uni_training_allsentence.append(line)
-#
-#     fileallSent.close()
-#
-# #uni_training_allsentence
-#     for line in uni_training_allsentence:
-#         fileunitrainingAllSent.write(line)
-#
-#     fileunitrainingAllSent.close()
+# if a is not None:
+#     print(a)
+#     print(a[0])
+#     print(a[1])
+#     print(a[2])
+#     print("####")
 
 
-#fileallRelation
-    uni_training_Cand5=[]
-
-    for j,one_triple in enumerate(fileallRelation):
-
-        if type(one_triple) is str or type(one_triple) is bytes:
-            #Python 3 renamed the unicode type to str, the old str type has been replaced by bytes
-            one_triple = eval(one_triple.strip('\n'))
-        # all triple example:
-        # {'subject_ori': 'administrators', 'relation_ori': 'configure', 'object_ori': 'app', 'subject': 'administrators', 'relation': 'configure', 'object': 'app', 'subject_stand': 'administrator', 'relation_stand': 'configure', 'object_stand': 'app', 'start_index': 14, 'end_index': 21, 'originalSent_len': 27, 'pos': 'NNS VB NN', 'relationType': 'NonTaxo', 'rel_id': '11352_27_1'}
-
-        entity_url_id = one_triple['rel_id']
-        entity_url_id=entity_url_id.split('_')[0]
-        if entity_url_id in filenameid_list:
-            uni_training_Cand5.append(str(one_triple))
-
-    fileallRelation.close()
-
-# fileunitrainingAllRelation
-    for line in uni_training_Cand5 :
-        fileunitrainingAllRelation.write(line)
-        fileunitrainingAllRelation.write('\n')
 
 
-    fileunitrainingAllRelation.close()
+def compare_exact_string(checkword, checkString):
+    str1list=checkword.split()
+    str2list=checkString.split()
+    flag=True
+    for word in str1list:
+        if word not in str2list :
+            flag=False
+            break;
+    return flag
 
-    return
 
-collect_training_triple_file()
+str2 = "ifaward-winnin ifx one  blueberries awardx awar"
+test ="ifx one"
+
+print(compare_exact_string(test,str2))
