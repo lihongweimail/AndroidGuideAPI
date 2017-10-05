@@ -13,7 +13,7 @@ import re
 
 # operate mysql database
 def generate_data():
-    conn = pymysql.connect(host='localhost', port=3306, user='lhw',passwd='lhw', db='AndroidGuideAPI')
+    conn = pymysql.connect(host='localhost', port=3306, user='root',passwd='root', db='AndroidGuideAPI')
     cur = conn.cursor()
     cur.execute("delete from entities")
     schema_list = entity_selection()
@@ -47,18 +47,25 @@ def entity_selection():
     section_list = []
     url_list = []
     p_uid_list = []
+    dict_pair={}
 
     schema_list = []
 
     for one_id_tag_line in file_id_tag:
         # print(one_id_tag_line)
-        phrase_u_id = one_id_tag_line.split(',')[0]
-        pure_phrase = one_id_tag_line.split(',')[1]
-        pure_url=one_id_tag_line.split(',')[2]
+        phrase_u_id = one_id_tag_line.split('\t,')[0]
+        pure_phrase = one_id_tag_line.split('\t,')[1]
+        pure_url=one_id_tag_line.split('\t,')[2]
         #pure_url = urllib.parse.unquote(pure_url).decode('utf8')
-        groups=one_id_tag_line.split(',')
+        groups=one_id_tag_line.split('\t,')
         pure_section=(''.join(groups[3:])).strip('\n')
         #pure_section = urllib.parse.unquote(pure_section).decode('utf8')
+
+        if pure_phrase.isdigit() :
+            continue
+        breakphrase=pure_phrase.split(' ')
+        if len(breakphrase)>1 :
+            continue
 
 
 
@@ -69,40 +76,63 @@ def entity_selection():
 
         #the first step , just get the entities from  the reference
         #next steps , it can add more from guide/topic/example/training ....
-        if ("https://developer.android.com/reference" in pure_section):
-            if "http" in pure_url :
-                if pure_section not in section_list:
-                    phrase_list.append(pure_phrase)
-                    section_list.append(pure_section)
-                    url_list.append(pure_url)
-                    p_uid_list.append(phrase_u_id)
-                    page_position=''
-                    page_url=''
-                    #get the type of entity(class, method , filed ),  entity parent
-                    if '#' in pure_section:
+        if "http" not in pure_section:
+            #h1 h2 ...
+            if ("https://developer.android.com/reference" in pure_url):
+                pure_type = pure_section
+                pure_section=pure_url+'#'+pure_phrase
+                phrase_list.append(pure_phrase)
+                section_list.append(pure_section)
+                url_list.append(pure_url)
+                p_uid_list.append(phrase_u_id)
+                page_position = ''
+                page_url = ''
 
-                        pageinfo=pure_section.split('#')
-                        page_url=pageinfo[0]
-                        classname=page_url.rsplit('/',1)[1]
-                        if '.' in classname:
-                            classname=classname.rsplit('.',1)[0]
+                pure_parent=''
+                pure_original = pure_phrase
+                # get the type of entity(class, method , filed ),  entity parent
+                print(phrase_u_id)
 
-                        pure_parent=classname
+                schema_list.append((pure_phrase, pure_section.strip('\n'), pure_url.strip('\n'), pure_parent, pure_type, pure_original,filename_list[pure_url.strip('\n')]))
 
-                        page_position=pageinfo[1]
-                        pure_original=page_position
-                        if '(' in page_position:
-                            pure_type='Method'
-                        else:
-                            pure_type='Field'
+        elif ("https://developer.android.com/reference" in pure_section):
+
+            if pure_section not in section_list:
+                phrase_list.append(pure_phrase)
+                section_list.append(pure_section)
+                url_list.append(pure_url)
+                p_uid_list.append(phrase_u_id)
+                page_position=''
+                page_url=''
+                #get the type of entity(class, method , filed ),  entity parent
+                if '#' in pure_section:
+
+                    pageinfo=pure_section.split('#')
+                    page_url=pageinfo[0]
+                    classname=page_url.rsplit('/',1)[1]
+                    if '.' in classname:
+                        classname=classname.rsplit('.',1)[0]
+
+                    pure_parent=classname
+
+                    page_position=pageinfo[1]
+                    pure_original=page_position
+                    if '(' in page_position:
+                        pure_type='Method'
                     else:
-                        classname = pure_section.rsplit('/', 1)[1]
-                        if '.' in classname:
-                            classname = classname.rsplit('.',1)[0]
-                        pure_original=classname
-                        pure_type='Class'
+                        pure_type='Field'
+                else:
+                    classname = pure_section.rsplit('/', 1)[1]
+                    if '.' in classname:
+                        classname = classname.rsplit('.',1)[0]
+                    pure_original=classname
+                    pure_type='Class'
 
-                    schema_list.append((pure_phrase,pure_section,pure_url,pure_parent,pure_type,pure_original,filename_list[pure_url]))
+                print(phrase_u_id)
+
+
+                schema_list.append((pure_phrase,pure_section.strip('\n'),pure_url.strip('\n'),pure_parent,pure_type,pure_original,filename_list[pure_url.strip('\n')]))
+
     file_id_tag.close()
 #    print(schema_list)
     print(len(schema_list))

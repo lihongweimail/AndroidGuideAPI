@@ -5,17 +5,17 @@ import pymysql
 
 def insert_waring_data(warning_list):
 
-    conn = pymysql.connect(host='localhost', port=3306, user='lhw', passwd='lhw', db='AndroidGuideAPI')
+    conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='root', db='AndroidGuideAPI')
     cur = conn.cursor()
 
     # try:
     cur.execute("delete from Warning")
 
-    sqli = "insert into Warning values(%s,%s,%s,%s,%s,%s,%s)"
+    sqli = "insert into Warning values(%s,%s,%s,%s,%s,%s,%s,%s)"
 
 
     for i, one_schema in enumerate(warning_list):
-        cur.execute(sqli, (i + 1, one_schema[0], one_schema[1], one_schema[2], one_schema[3], one_schema[4], one_schema[5]))
+        cur.execute(sqli, (i + 1, one_schema[0], one_schema[1], one_schema[2], one_schema[3], one_schema[4], one_schema[5],one_schema[6]))
         # except:
 
 
@@ -30,10 +30,10 @@ def insert_waring_data(warning_list):
 
 def get_all_relation_data():
     all_relation_list = []
-    conn = pymysql.connect(host='localhost', port=3306, user='lhw',passwd='lhw', db='AndroidGuideAPI')
+    conn = pymysql.connect(host='localhost', port=3306, user='root',passwd='root', db='AndroidGuideAPI')
     cur = conn.cursor()
     # try:
-    cur.execute("select id, EntityOne, Relation, EntityTwo,  RelationSection, RelationURL, RelationText, URLid, Sentenceid, Relationid from EntitiesRelation")
+    cur.execute("select id, EntityOne, Relation, EntityTwo,  RelationSection, RelationURL, RelationText, URLid, Sentenceid, Relationid, POSinfo, SectionType from EntitiesRelation")
     results = cur.fetchall()
 
     for row in results:
@@ -47,8 +47,10 @@ def get_all_relation_data():
         URLid = row[7]
         Sentenceid = row[8]
         Relationid = row[9]
+        POSinfo=row[10]
+        SectionType=row[11]
 
-        all_relation_list.append((index, EntityOne, Relation, EntityTwo, RelationSection, RelationURL, RelationText, URLid,  Sentenceid, Relationid))
+        all_relation_list.append((index, EntityOne, Relation, EntityTwo, RelationSection, RelationURL, RelationText, URLid,  Sentenceid, Relationid,POSinfo,SectionType))
 
 
 # except:
@@ -73,6 +75,7 @@ def generate_warning_data(all_relation_list):
     # relation:  0index, 1EntityOne, 2Relation, 3EntityTwo, 4Section, 5URL, 6RelationText, 7URLid, 8Sentenceid, 9Relationid
 
     # generate warning list
+
     for one_relation in all_relation_list:
         for warningword in warning_define_list:
             WarningType = ' '
@@ -226,9 +229,10 @@ def generate_warning_data(all_relation_list):
                     warningTag = 'other'
 
                 # AndroidGuideAPI.Warning:  index, WarningTag,WarningSection,WarningText,WarningType,WarningURL
-                warningList.append((warningTag, one_relation[4], one_relation[6], WarningType, one_relation[5],one_relation[8]))
+                warningList.append((warningTag, one_relation[4], one_relation[6], WarningType, one_relation[5],one_relation[8],one_relation[9]))
                 break
 
+    warningList=list(set(warningList))
     return warningList
 
 
@@ -240,7 +244,7 @@ def c_e_s(checkword, checkString):
     for word in str1list:
         if word not in str2list :
             flag=False
-            break;
+            break
     return flag
 
 

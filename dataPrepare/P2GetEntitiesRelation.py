@@ -17,8 +17,8 @@ def start():
 
 # extract by xpath
 def extract_ele(driver):
-    file_keyPhrase = open('./../data/training_text_out.txt', 'w')
-    file_filenamelist = open('/Users/Grand/Downloads/HDSKG/tempdata/uni_filenamelist_training.csv')
+    file_keyPhrase = open('/Users/Grand/Downloads/HDSKG/tempdata/all_rel_section_out.txt', 'w')
+    file_filenamelist = open('/Users/Grand/Downloads/HDSKG/tempdata/filenamelist.csv')
 
 
 
@@ -30,31 +30,38 @@ def extract_ele(driver):
 
         urlsplit=one_line.split(',')
         url_id = urlsplit[0]
-        print(url_id)
+        print("processing file :"+one_line)
         # goal_website = (one_url.split('/guideAPI/')[1]).strip('\n')
         goal_website = (''.join(urlsplit[1:])).strip('\n')
         # goal_website = 'developer.android.com/training/accessibility/accessible-app.html'
         # driver.get('https://' + goal_website)
         driver.get( goal_website)
 
-        findtext=driver.find_elements_by_xpath('//*[@id="body-content"]/div[1]')
+        basic_xpath = '//*[@id="body-content"]/div[2]'
+        basic_headerpath = '//*[@id="body-content"]/div[1]'
+
+
+        findtext = driver.find_elements_by_xpath('//*[@id="body-content"]/div[1]')
         if findtext is not None:
             basic_xpath = '//*[@id="body-content"]/div[2]'
+            basic_headerpath = '//*[@id="body-content"]/div[1]'
         else :
             findtext = driver.find_elements_by_xpath('//*[@itemprop="articleBody"]/div[1]')
             if findtext is not None:
-                basic_xpath='//*[@itemprop="articleBody"]/div[2]'
-            else :
+                basic_xpath = '//*[@itemprop="articleBody"]/div[2]'
+                basic_headerpath = '//*[@itemprop="articleBody"]/div[1]'
+            else:
                 findtext = driver.find_elements_by_xpath('//*[@class="gc-documentation"]/div[1]')
                 if findtext is not None:
                     basic_xpath = '//*[@class="gc-documentation"]/div[2]'
+                    basic_headerpath = '//*[@class="gc-documentation"]/div[1]'
                 else:
                     continue
 
 
         header_list = []
         api_list = []
-        header_h1 = driver.find_elements_by_xpath('//*[@id="body-content"]/div[1]/h1')
+        header_h1 = driver.find_elements_by_xpath(basic_headerpath+'/h1')
         if header_h1 != [] and header_h1[0].text != '':
             header_list.append((header_h1[0].text, 0, 'h1'))
             # (header's name, its sequence mark, type)
@@ -76,7 +83,7 @@ def extract_ele(driver):
 
         h3_total_count = len(h3_last_sibling)
 
-        print(para_total_count, h2_total_count, h3_total_count)
+        print("paras:"+para_total_count, "h2 count:"+h2_total_count,"h3 count:"+ h3_total_count)
 
         for i in range(1, para_total_count + 1):
             api_code = driver.find_elements_by_xpath(basic_xpath + '/p[' + str(i) + ']//code')
@@ -104,8 +111,8 @@ def extract_ele(driver):
         #python 3  there no "cmp" parameter for sort
         header_list.sort(key=takeListSecond)
 
-        print(header_list)
-        print(api_list)
+        print(len(header_list))
+        print(len(api_list))
         for one_api in api_list:
             file_keyPhrase.write(url_id + ', ')
             file_keyPhrase.write(one_api[0] + ', ')
@@ -131,11 +138,26 @@ def extract_ele(driver):
 def takeListSecond(elem):
     return elem[1]
 
+
+# compare_exact_string
+def c_e_s(checkword, checkString):
+    ablankre = re.compile(r'\s+')
+    checkString=ablankre.sub(' ',checkString)
+    checkword = ablankre.sub(' ', checkword)
+    str1list = checkword.split()
+    str2list = checkString.split()
+    flag = True
+    for word in str1list:
+        if word not in str2list:
+            flag = False
+            break;
+    return flag
+
 # select the triple
 def triple_selection():
-    file_triple = open('/Users/Grand/Downloads/HDSKG/tempdata/uni_AndroidAPI_training_Cand5_ascii.txt')
-    file_key_phrase = open('./../data/training_text_out.txt')
-    file_allsentence = open('/Users/Grand/Downloads/HDSKG/tempdata/uni_AndroidAPI_training_Sent_ascii.txt')
+    file_triple = open('/Users/Grand/Downloads/HDSKG/tempdata/androidAPIallCand5_ascii.txt')
+    file_key_phrase = open('/Users/Grand/Downloads/HDSKG/tempdata/all_rel_section_out.txt')
+    file_allsentence = open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt')
 
     #allSent example:  "id \t text"
     #11352_27	Go further to support business use of your app by enabling restrictions that administrators can use to remotely configure your app: Manage Devices and Apps.
@@ -191,14 +213,15 @@ def triple_selection():
         # print entity1, relation, entity2
 
         for i, one_phrase in enumerate(phrase_list):
-            if entity_url_id == p_uid_list[i] \
-                    and (re.search('\\b' + one_phrase + '\\b', entity1) or re.search('\\b' + one_phrase + '\\b', entity2)):
+            #移除非ASCII符号
+            one_phrase=''.join([i if (ord(i) < 128) and (i is not '\n') else ' ' for i in one_phrase])
+            if entity_url_id == p_uid_list[i] and (c_e_s(one_phrase,entity1) or c_e_s(one_phrase,entity2)):
                 section = section_list[i]
                 url = url_list[i]
                 schema_list.append((entity1, relation, entity2, section, url, sentence_text,entity_url_id,sentence_id,relation_id))
                 # print(entity_url_id)
                 print(p_uid_list[i])
-                print (entity1, relation, entity2, section, url,sentence_text,entity_url_id,sentence_id,relation_id)
+                # print (entity1, relation, entity2, section, url,sentence_text,entity_url_id,sentence_id,relation_id)
                 print(one_phrase)
                 break
 
@@ -219,7 +242,7 @@ def triple_selection():
 
 # operate mysql database
 def generate_data():
-    conn = pymysql.connect(host='localhost', port=3306, user='lhw',passwd='lhw', db='AndroidGuideAPI')
+    conn = pymysql.connect(host='localhost', port=3306, user='root',passwd='root', db='AndroidGuideAPI')
     cur = conn.cursor()
     cur.execute("delete from EntitiesRelation")
     schema_list = triple_selection()
@@ -236,7 +259,7 @@ def generate_data():
 
 
 # === start programer ====
-#start()
+start()
 
 #triple_selection()
 
