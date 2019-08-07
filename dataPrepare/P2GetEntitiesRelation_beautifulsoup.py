@@ -402,6 +402,7 @@ def triple_selection_fromfile():
     file_key_phrase.close()
 
     print(len(schema_list))
+    schema_list.sort(key=lambda tup: tup[0])
     return schema_list
 
 

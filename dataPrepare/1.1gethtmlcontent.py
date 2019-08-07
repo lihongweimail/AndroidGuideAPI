@@ -397,17 +397,29 @@ while filenumber < len(filesNamelist):
             # 保留 短线 ，150； 破折号 ， 151,
 
             # 清除非ASCII符号
-            text = ''.join([i if (ord(i) > 150 or ord(i) < 151 or ord(i) < 128)  else ' ' for i in text])
+            text = ''.join([i if (ord(i)>31 and ord(i) < 128)  else ' ' for i in text])
             # dirty = text
             #
             # temptext = re.sub(r'[\0\200-\377]', '', dirty)
 
 
 
-            text = text.replace('you’re', 'you are').replace('What’s ', 'What is').replace('it’s', 'It is').replace('It’s','It is')
+            text = text.strip().strip('.').replace(' …', '').replace('… ', ' ').\
+				replace(' ↔', '').replace('Λ', '').\
+				replace(' –', '').replace('— ', '').replace('’', '\'').replace('®', '').\
+                replace('™', '').replace('ü', 'u').replace('Θ', '0').replace(' --', ' ').\
+				replace('“', '\'').replace('”', '\'').replace('you\'re ', 'developer are ').\
+				replace('we\'re ', 'developers are ').replace('we\'ll ', 'developers will ').\
+				replace('What’s ', 'What is ').replace('you\'ll ','developer will ').\
+				replace('you\'d like ','developer would like ').replace('  ',' ').\
+                encode(encoding='UTF-8')
 
             text = atabre.sub(' ', text)
             text = ablankre.sub(' ', text)
+
+
+
+
 
             file_w_allDoc.write(str(writeid) + '\t' + text)
             file_w_allDoc.write('\n')
@@ -423,6 +435,10 @@ while filenumber < len(filesNamelist):
                 # onesentence = onesentence.replace(':', ' ')
                 onesentencelist = onesentence.split(' ')
                 onesentencslen = len(onesentencelist)
+                if len(onesentence.split(' ')) < 3 or len(onesentence) < 3:
+                    # print oneSent
+                    continue
+
                 if onesentence.strip('.').strip() in "In this document":
                     continue
 

@@ -121,6 +121,9 @@ def generate_warning_data(all_relation_list):
                 elif c_e_s('note:', compareString):
                     WarningType = 'Note'
                     warningTag = 'note:'
+                elif c_e_s('Note:', compareString):
+                    WarningType = 'Note'
+                    warningTag = 'Note:'
                 elif c_e_s('consider', compareString):
                     WarningType = 'Note'
                     warningTag = 'consider'
@@ -149,6 +152,21 @@ def generate_warning_data(all_relation_list):
                     warningTag = 'whether'
 
 
+
+                elif c_e_s('must', compareString):
+                    WarningType = 'Must'
+                    warningTag = 'must'
+                elif c_e_s('must\'t', compareString):
+                    WarningType = 'Must'
+                    warningTag = 'must\'t'
+                elif c_e_s('mustn\'t', compareString):
+                    WarningType = 'Must'
+                    warningTag = 'mustn\'t'
+                elif c_e_s('must not', compareString):
+                    WarningType = 'Must'
+                    warningTag = 'must not'
+
+
                 elif c_e_s('can', compareString):
                     WarningType = 'Can'
                     warningTag = 'can'
@@ -167,20 +185,6 @@ def generate_warning_data(all_relation_list):
                 elif c_e_s('could not', compareString):
                     WarningType = 'Can'
                     warningTag = 'could not'
-
-
-                elif c_e_s('must', compareString):
-                    WarningType = 'Must'
-                    warningTag = 'must'
-                elif c_e_s('must\'t', compareString):
-                    WarningType = 'Must'
-                    warningTag = 'must\'t'
-                elif c_e_s('mustn\'t', compareString):
-                    WarningType = 'Must'
-                    warningTag = 'mustn\'t'
-                elif c_e_s('must not', compareString):
-                    WarningType = 'Must'
-                    warningTag = 'must not'
 
 
                 elif c_e_s('should', compareString):
@@ -238,8 +242,8 @@ def generate_warning_data(all_relation_list):
 
 #compare_exact_string
 def c_e_s(checkword, checkString):
-    str1list=checkword.split()
-    str2list=checkString.split()
+    str1list=checkword.lower().split()
+    str2list=checkString.lower().split()
     flag=True
     for word in str1list:
         if word not in str2list :

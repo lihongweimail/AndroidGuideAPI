@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9169671-cbb0-4c26-9fc9-cbc3597c77d2" name="Default" comment="Third commit , the first ready data on training . it can used by web &#10;pages augment tool.">
+      <change afterPath="$PROJECT_DIR$/data/androidAPI_id_tag_full_info_training.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dbReadme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/filenamelist_reference.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/filenamelist_training.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/1.5article2sentOnly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P1PureEntities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_multi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSME.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSMEmakeup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/cleanEntities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/collectEntities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/collectEntitiesOnlyFORpara.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/genFilenamelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/generateCoreferenceSentencesTable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/generateRelationRawTable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/generateSentencesTable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/getRandomRows.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/gethierarchrelation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataPrepare/sentence_chunking_dep_for_tempdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/1.1gethtmlcontent.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/1.1gethtmlcontent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/1.5article2sent.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/1.5article2sent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P1GetEntities.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P1GetEntities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation_beautifulsoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation_beautifulsoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarning.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/AndroidGuideAPI.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/AndroidGuideAPI.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P3GenRelatedWarningICSME.coverage" NAME="P3GenRelatedWarningICSME Coverage Results" MODIFIED="1523039579973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$RemoveNonASCIIChar.coverage" NAME="RemoveNonASCIIChar Coverage Results" MODIFIED="1507161712871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P2GetEntitiesRelation_beautifulsoup.coverage" NAME="P2GetEntitiesRelation_beautifulsoup Coverage Results" MODIFIED="1507164258422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$collectEntities.coverage" NAME="collectEntities Coverage Results" MODIFIED="1521984590226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$getRandomRows.coverage" NAME="getRandomRows Coverage Results" MODIFIED="1523257611256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P2GetEntitiesRelationICSME_multi.coverage" NAME="P2GetEntitiesRelationICSME_multi Coverage Results" MODIFIED="1522819321575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P4GenRecommandWarning_MultiProcessingICSME.coverage" NAME="P4GenRecommandWarning_MultiProcessingICSME Coverage Results" MODIFIED="1522682819897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P3GenRelatedWarning.coverage" NAME="P3GenRelatedWarning Coverage Results" MODIFIED="1507171905487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P1GetEntities.coverage" NAME="P1GetEntities Coverage Results" MODIFIED="1508207888470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$test.coverage" NAME="test Coverage Results" MODIFIED="1523239414140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P4GenRecommandWarning.coverage" NAME="P4GenRecommandWarning Coverage Results" MODIFIED="1508246548228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P2GetEntitiesRelationICSME_new.coverage" NAME="P2GetEntitiesRelationICSME_new Coverage Results" MODIFIED="1523188171220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$generateRelationRawTable.coverage" NAME="generateRelationRawTable Coverage Results" MODIFIED="1522719447401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$genFilenamelist.coverage" NAME="genFilenamelist Coverage Results" MODIFIED="1523108449622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$generateCoreferenceSentencesTable.coverage" NAME="generateCoreferenceSentencesTable Coverage Results" MODIFIED="1522914435016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$generateSentencesTable.coverage" NAME="generateSentencesTable Coverage Results" MODIFIED="1522636686204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P3GenRelatedWarningICSMEmakeup.coverage" NAME="P3GenRelatedWarningICSMEmakeup Coverage Results" MODIFIED="1522904090697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P4GenRecommandWarning_MultiProcessing.coverage" NAME="P4GenRecommandWarning_MultiProcessing Coverage Results" MODIFIED="1508249131134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P4GenRecommandWarningICSME.coverage" NAME="P4GenRecommandWarningICSME Coverage Results" MODIFIED="1524673331033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P2GetEntitiesRelation.coverage" NAME="P2GetEntitiesRelation Coverage Results" MODIFIED="1507071048804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$sentence_chunking_dep_for_tempdata.coverage" NAME="sentence_chunking_dep_for_tempdata Coverage Results" MODIFIED="1522430080537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$1_5article2sentOnly.coverage" NAME="1.5article2sentOnly Coverage Results" MODIFIED="1522325447316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+    <SUITE FILE_PATH="coverage/AndroidGuideAPI$P2GetEntitiesRelationICSME.coverage" NAME="P2GetEntitiesRelationICSME Coverage Results" MODIFIED="1522865231962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataPrepare" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AndroidGuideAPI@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AndroidGuideAPI@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AndroidGuideAPI@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="AndroidGuideAPI: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AndroidGuideAPI@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="AndroidGuideAPI: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataPrepare/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbReadme.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/dbReadme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>discourage</find>
+      <find>linkEntitys</find>
+      <find>entitidstringlist</find>
+      <find>EntitiesRelation</find>
+      <find>link</find>
+      <find>one_schema[5]</find>
+      <find>doc_id</find>
+      <find>filename</find>
+      <find>os.get</find>
+      <find>os.pardir</find>
+      <find>lastid</find>
+      <find>from entities</find>
+      <find>from warning</find>
+      <find>allrelation</find>
+      <find>else:</find>
+      <find>doc</find>
+      <find>rel_id</find>
+      <find>print(j,</find>
+      <find>last</find>
+      <find>print</find>
+      <find>insert into</find>
+      <find>allsent</find>
+      <find>c_e_s</find>
+      <find>c_e_</find>
+      <find>allCoreferenceSentences</find>
+      <find>rsplit('_',</find>
+      <find>split</find>
+      <find>filenameDict</find>
+      <find>if</find>
+      <find>part_recommand_list</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>'root'</replace>
+      <replace>information into an</replace>
+      <replace>information</replace>
+      <replace>an array</replace>
+      <replace>Entities</replace>
+      <replace>Restricted</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/data</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lihongweimail &lt;lihongweimail@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test/GenTrainingTriplestoDB.py" />
+        <option value="$PROJECT_DIR$/test/GenTrainingTriplesToFile.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/1.1getPureIDTag.py" />
+        <option value="$PROJECT_DIR$/test/RemoveNonASCIIChar.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarning.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P4PureRecommandWarning.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P1PureEntities.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation_beautifulsoup.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/cleanEntities.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P1GetEntities.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/1.5article2sent.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/1.1gethtmlcontent.py" />
+        <option value="src:table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.api_parameter" />
+        <option value="$PROJECT_DIR$/dataPrepare/collectEntities.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/collectEntitiesOnlyFORpara.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/1.5article2sentOnly.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/updateURLidforEntities.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/sentence_chunking_dep_for_tempdata.py" />
+        <option value="src:table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.allSentences" />
+        <option value="$PROJECT_DIR$/dataPrepare/generateSentencesTable.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/generateRelationRawTable.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessingICSME.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessing.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_multi.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSMEmakeup.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/generateCoreferenceSentencesTable.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/gethierarchrelation.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSME.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/genFilenamelist.py" />
+        <option value="$PROJECT_DIR$/test/test.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/getRandomRows.py" />
+        <option value="fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/androidguideapi/view/uniquelink.sql" />
+        <option value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_new.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fdb33a90-1131-4dff-b6cd-bb68dd915df9/console.sql" />
+        <option value="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME.py" />
+        <option value="$PROJECT_DIR$/dataPrepare/readme.txt" />
+        <option value="$PROJECT_DIR$/data/dbReadme.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="731" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AndroidGuideAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidGuideAPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidGuideAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidGuideAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidGuideAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidGuideAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidGuideAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidGuideAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="dataPrepare" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidGuideAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidGuideAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="tempdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dataPrepare" />
+      <recent name="$PROJECT_DIR$/tempdata" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.P4GenRecommandWarningICSME">
+    <configuration name="P2GetEntitiesRelationICSME_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AndroidGuideAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPrepare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="P4GenRecommandWarningICSME" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AndroidGuideAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/ENVPYTHON/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPrepare" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="genFilenamelist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AndroidGuideAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPrepare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPrepare/genFilenamelist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="getRandomRows" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AndroidGuideAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPrepare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPrepare/getRandomRows.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AndroidGuideAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.P2GetEntitiesRelationICSME_new" />
+      <item itemvalue="Python.genFilenamelist" />
+      <item itemvalue="Python.getRandomRows" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.P4GenRecommandWarningICSME" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.P4GenRecommandWarningICSME" />
+        <item itemvalue="Python.getRandomRows" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.P2GetEntitiesRelationICSME_new" />
+        <item itemvalue="Python.genFilenamelist" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9169671-cbb0-4c26-9fc9-cbc3597c77d2" name="Default" comment="" />
+      <created>1506595109861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506595109861</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit for the data prepare">
+      <created>1506605763347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506605763347</updated>
+    </task>
+    <task id="LOCAL-00002" summary="second commit for the basic database  and table's structure and data &#10;from training web pages.">
+      <created>1506606030679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506606030679</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Third commit , the first ready data on training . it can used by web &#10;pages augment tool.">
+      <created>1506727964111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1506727964111</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fourth commit , add P3GenRelatedWarning.py.">
+      <created>1506728135333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506728135333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fourth commit , update the code for preparing all warning data from &#10; website developer.android.com .&#10; for speeding requirement add the Multiprocessing code for &#10; P4GenRecommandWarning .">
+      <created>1507200400281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507200400281</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5024233" side_tool="true" weight="0.3181818" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49757674" weight="0.3181818" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49676898" weight="0.328125" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49353796" weight="0.328125" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6737968" visible="true" weight="0.2046875" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1890625" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="2" sideWeight="0.3262032" side_tool="true" visible="true" weight="0.2046875" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6332795" weight="0.45357686" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="SQL Generator" order="11" weight="0.32954547" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="运行" order="7" />
+      <window_info anchor="right" id="Data View" order="3" weight="0.22204472" />
+      <window_info anchor="right" x="0" y="0" width="270" height="600" id="Documentation" order="3" weight="0.32956383" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.5121163" weight="0.38964993" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4838449" weight="0.22222222" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit for the data prepare" />
+    <MESSAGE value="second commit for the basic database  and table's structure and data &#10;from training web pages." />
+    <MESSAGE value="Third commit , the first ready data on training . it can used by web &#10;pages augment tool." />
+    <MESSAGE value="fourth commit , add P3GenRelatedWarning.py." />
+    <MESSAGE value="Fourth commit , update the code for preparing all warning data from &#10; website developer.android.com .&#10; for speeding requirement add the Multiprocessing code for &#10; P4GenRecommandWarning ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fourth commit , update the code for preparing all warning data from &#10; website developer.android.com .&#10; for speeding requirement add the Multiprocessing code for &#10; P4GenRecommandWarning ." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation_beautifulsoup.py</url>
+          <line>336</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessing.py</url>
+          <line>285</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>255</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>247</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/collectEntities.py</url>
+          <line>603</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/collectEntities.py</url>
+          <line>625</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/1.5article2sentOnly.py</url>
+          <line>164</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>493</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>481</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>479</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/sentence_chunking_dep_for_tempdata.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/sentence_chunking_dep_for_tempdata.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>609</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>635</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>611</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>206</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>313</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/collectEntitiesOnlyFORpara.py</url>
+          <line>365</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/generateSentencesTable.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSME.py</url>
+          <line>380</line>
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/generateRelationRawTable.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>738</line>
+          <option name="timeStamp" value="249" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>734</line>
+          <option name="timeStamp" value="250" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_multi.py</url>
+          <line>303</line>
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_multi.py</url>
+          <line>325</line>
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_multi.py</url>
+          <line>339</line>
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>360</line>
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>336</line>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>338</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>434</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>315</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py</url>
+          <line>380</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSME.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSMEmakeup.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>241</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>260</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/getRandomRows.py</url>
+          <line>182</line>
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py</url>
+          <line>197</line>
+          <option name="timeStamp" value="291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="292" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="295" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ERlist</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>erlist</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>onelinklist</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(ERlist)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(linklist)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>one_schema</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(lastid+i + 1, one_schema[0],one_schema[1],one_schema[2], one_schema[3],one_schema[4],one_schema[5], one_schema[6],one_schema[7],one_schema[8], one_schema[9],one_schema[10], one_schema[11],one_schema[12])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(entity_id,entity_name,entity_url,warning_id,rel_id,warning_Text, warning_URL, subject_ori,relation_ori,object_ori,pos,warning_Tag,warning_Type)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cur.execute(&quot;select id, EntityName, EntitySection, EntityURL, EntityParent, EntityType, EntityOriginal, URLid, QualifiedName from Entities where FIND_IN_SET(EntityName,%s)!=0&quot;,(keywords))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.api_library" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.api_class" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
+          <folding>
+            <marker date="1508247639000" expanded="true" signature="263:291" ph="delete from RecommandWarning... " />
+            <marker date="1508247639000" expanded="true" signature="307:355" ph="insert into RecommandWarning... " />
+            <marker date="1508247639000" expanded="true" signature="795:920" ph="select id, E... Entities" />
+            <marker date="1508247639000" expanded="true" signature="1763:1882" ph="select id, W... Warning" />
+            <marker date="1508247639000" expanded="true" signature="2668:2829" ph="select id, E... EntitiesRelation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.entity" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P1GetEntities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="97" column="36" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="97" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.filenamelist" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/genFilenamelist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.linkEntitys" />
+    <entry file="file://$USER_HOME$/ENVPYTHON/lib/python3.6/site-packages/pymysql/cursors.py" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSME.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="45" column="27" selection-start-line="25" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.Warningmakeup" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.Entities" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.allRelations" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.Warning" />
+    <entry file="dbSrc:///3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/AndroidGuideAPI/view/uniquelink.sql" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P1PureEntities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="11" column="117" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.RandomOpenlinkInstance" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.linkEntitysNew" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="440" selection-start-line="426" selection-end-line="440" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.EntitiesRelation" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.EntitiesRelationBackup" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.RecommandWarning" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.RecommandWarningx" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.randomLinkRows" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.randomOpenLinkRows" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.allpairSentences" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.allCoreferenceSentences" />
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.allSentences" />
+    <entry file="file://$PROJECT_DIR$/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13950">
+          <caret line="932" column="43" selection-start-line="932" selection-start-column="6" selection-end-line="932" selection-end-column="43" />
+          <folding>
+            <element signature="e#21627#21636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.RandomSentence" />
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelation_beautifulsoup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="60" />
+          <folding>
+            <marker date="1508201802000" expanded="true" signature="13468:13496" ph="delete from EntitiesRelation... " />
+            <marker date="1508201802000" expanded="true" signature="13511:13583" ph="insert into EntitiesRelation... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://view:/3e8feec/fdb33a90-1131-4dff-b6cd-bb68dd915df9/AndroidGuideAPI.uniquelink" />
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/AndroidGuideAPI/table/EntitiesRelationBackup">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/AndroidGuideAPI/view/uniquelink">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/AndroidGuideAPI/table/RandomSentence">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="length(sentenceText)&gt;30" />
+            <filter text="length(sentenceText)&gt;10" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/ENVPYTHON/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/AndroidGuideAPI/table/randomOpenLinkRows">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/ENVPYTHON/lib/python3.6/site-packages/pymysql/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/androidguideapi/table/entitiesrelation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/ENVPYTHON/lib/python3.6/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7010">
+          <caret line="1038" selection-start-line="1038" selection-end-line="1038" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarning_MultiProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#26#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P4GenRecommandWarningICSME_multi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/androidguideapi/table/entitiesnew">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fdb33a90-1131-4dff-b6cd-bb68dd915df9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P2GetEntitiesRelationICSME_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#15#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fdb33a90-1131-4dff-b6cd-bb68dd915df9/schema/androidguideapi/table/entities">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/P3GenRelatedWarningICSMEmakeup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/getRandomRows.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="409" column="10" selection-start-line="409" selection-start-column="10" selection-end-line="409" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testme.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPrepare/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dbReadme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

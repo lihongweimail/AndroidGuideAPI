@@ -1,6 +1,7 @@
 # coding:utf-8
 from functools import cmp_to_key
 
+import os
 from selenium import webdriver
 import pymysql
 import pymysql.cursors
@@ -17,8 +18,9 @@ def start():
 
 # extract by xpath
 def extract_ele(driver):
-    file_keyPhrase = open('/Users/Grand/Downloads/HDSKG/tempdata/all_rel_section_out.txt', 'w')
-    file_filenamelist = open('/Users/Grand/Downloads/HDSKG/tempdata/filenamelist.csv')
+    data_path = os.pardir + '/tempdata'
+    file_keyPhrase = open(data_path+'/all_rel_section_out_ICSME.txt', 'w')
+    file_filenamelist = open(data_path+'/filenamelist_copy.csv')
 
 
 
@@ -125,7 +127,7 @@ def extract_ele(driver):
                     break
             if not write_flag:
                 file_keyPhrase.write(header_list[-1][0] + ', ')
-            file_keyPhrase.write('https://' + goal_website.replace('/Users/Grand/Downloads/sitesucker/guideAPI/','') + '\n')
+            file_keyPhrase.write(goal_website + '\n')
 
             # break
 
@@ -155,9 +157,10 @@ def c_e_s(checkword, checkString):
 
 # select the triple
 def triple_selection():
-    file_triple = open('/Users/Grand/Downloads/HDSKG/tempdata/androidAPIallCand5_ascii.txt')
-    file_key_phrase = open('/Users/Grand/Downloads/HDSKG/tempdata/all_rel_section_out.txt')
-    file_allsentence = open('/Users/Grand/Downloads/HDSKG/tempdata/AndroidAPI_allSent_ascii.txt')
+    data_path = os.pardir + '/tempdata'
+    file_triple = open(data_path+'/androidAPIallCand5ICSME.txt')
+    file_key_phrase = open(data_path+'/all_rel_section_out_ICSME.txt')
+    file_allsentence = open(data_path+'/androidAPIallSentICSME.txt')
 
     #allSent example:  "id \t text"
     #11352_27	Go further to support business use of your app by enabling restrictions that administrators can use to remotely configure your app: Manage Devices and Apps.
@@ -241,11 +244,11 @@ def triple_selection():
 
 
 # operate mysql database
-def generate_data():
+def generate_data(schema_list):
     conn = pymysql.connect(host='localhost', port=3306, user='root',passwd='root', db='AndroidGuideAPI')
     cur = conn.cursor()
     cur.execute("delete from EntitiesRelation")
-    schema_list = triple_selection()
+
     sqli = "insert into EntitiesRelation values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     for i, one_schema in enumerate(schema_list):
         cur.execute(sqli, (i + 1, one_schema[0], one_schema[1], one_schema[2], one_schema[3], one_schema[4], one_schema[5], one_schema[6], one_schema[7], one_schema[8]))
@@ -261,6 +264,6 @@ def generate_data():
 # === start programer ====
 start()
 
-#triple_selection()
+schema_list = triple_selection()
 
-generate_data()
+generate_data(schema_list)

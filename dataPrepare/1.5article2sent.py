@@ -53,6 +53,7 @@ def main():
 		for j, oneSent in enumerate(onewiki):
 			# print oneSent
 			# print len(oneSent)
+			oneSent.replace('  ',' ')
 			if len(oneSent.split(' ')) < 3 or len(oneSent) < 3:
 				# print oneSent
 				del onewiki[j]
@@ -69,10 +70,15 @@ def main():
 			#
 			oneSent = oneSent.strip('\n').strip('.') + '.'
 			oneSent = oneSent.strip().strip('.').replace(' …', '').replace('… ', ' ').\
-				replace(' ↔', '').replace('Λ', '').replace('Μ', '').replace(' –', '').replace(' —', '').replace('–', '-').\
-						   replace('you’re', 'you are').replace('What’s ', 'What is').replace('’', '\'').\
-						   replace('it’s', 'It is').replace('It’s', 'It is').replace('®', '').replace('™', '').replace('ü', 'u').\
-						   replace('Θ', '0').replace(' --', '').replace('“', '\'').replace('”', '\'').encode(encoding='UTF-8')
+				replace(' ↔', '').replace('Λ', '').replace('Μ', '').\
+				replace(' –', '').replace(' —', '').replace('–', '-').\
+				replace('’', '\'').replace('®', '').replace('™', '').\
+				replace('ü', 'u').replace('Θ', '0').replace(' --', '').\
+				replace('“', '\'').replace('”', '\'').replace('you\'re ', 'you are ').\
+				replace('we\'re ', 'we are ').replace('we\'ll ', 'we will ').\
+				replace('What’s ', 'What is ').replace('you\'ll ','you will ').\
+				replace('you\'d like ','you would like ').replace('  ',' ').encode(encoding='UTF-8')
+			# .replace('it\'s', 'It is').replace('It’s', 'It is')
 			# if chardet.detect(oneSent)['encoding'] not in ( 'ascii', 'utf-8'):
 			# 	continue
 			# else:
